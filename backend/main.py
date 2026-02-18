@@ -11,6 +11,7 @@ import shutil
 # UploadFile & File: Classes to handle file uploads in API endpoints.
 # HTTPException: Used to raise HTTP errors (e.g., 400 Bad Request, 404 Not Found).
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware 
 
 # Import BaseModel from Pydantic to define data schemas and perform 
 # request body validation (e.g., validating JSON inputs).
@@ -55,6 +56,16 @@ load_dotenv()
 # Create an instance of the FastAPI application.
 # This 'app' object will define routes (endpoints) and handle incoming web requests.
 app = FastAPI()
+
+
+# --- middleware ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, we'd specify "http://localhost:5173"
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Define the directory path where uploaded files will be stored.
 UPLOAD_DIR = "uploads"
