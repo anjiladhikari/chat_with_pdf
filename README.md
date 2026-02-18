@@ -6,17 +6,17 @@
 
 A high-performance, full-stack AI application that allows users to chat with their PDF documents. Built with a decoupled architecture using **FastAPI** (Python) for the RAG pipeline and **React** (Vite) for the frontend.
 
-**[🚀 View Live Demo](https://chatwithpdf-git-main-anjil-adhikaris-projects.vercel.app/)**
+**[ View Live Demo](https://chatwithpdf-git-main-anjil-adhikaris-projects.vercel.app/)**
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 The application follows a decoupled client-server architecture to ensure scalability and separation of concerns.
 
 ### The Stack
-* **Frontend:** React + Vite + Tailwind CSS (Deployed on Vercel).
-* **Backend:** FastAPI + Uvicorn (Containerized with Docker on Hugging Face Spaces).
+* **Frontend:** React + Vite + Tailwind CSS.
+* **Backend:** FastAPI + Uvicorn.
 * **AI Inference (LLM):** Llama-3-8b via **Groq LPU** (Language Processing Unit) for ultra-low latency.
 * **Vector Store:** ChromaDB (In-memory) for efficient similarity search.
 * **Embeddings:** `sentence-transformers/all-MiniLM-L6-v2` (Running locally for zero-cost embedding).
@@ -31,17 +31,34 @@ The application follows a decoupled client-server architecture to ensure scalabi
 
 ---
 
-## 🚀 Features
+## ☁️ Deployment
 
-* **⚡ Ultra-Fast Inference:** Leverages Groq's LPU technology for near-instant AI responses.
-* **📄 PDF Parsing:** Robust text extraction handling various PDF formats.
-* **🧠 Contextual Awareness:** Uses similarity search to "read" only the relevant parts of the document.
-* **🐳 Dockerized:** Fully containerized backend for consistent deployment across environments.
-* **🎨 Modern UI:** Clean, split-screen interface built with Tailwind CSS.
+This project is deployed using a modern, cloud-native approach:
+
+### 1. Backend: Hugging Face Spaces (Docker)
+The FastAPI backend is containerized using **Docker** and hosted on **Hugging Face Spaces**.
+* **Why:** Hugging Face provides a generous free tier with 16GB RAM, which is critical for running the local embedding model (`all-MiniLM-L6-v2`) and ChromaDB in-memory without crashing.
+* **URL:** `https://anjil-talk-with-pdf.hf.space`
+
+### 2. Frontend: Vercel
+The React frontend is deployed on **Vercel**, utilizing their Edge Network for fast global access.
+* **Why:** Native support for Vite/React and seamless CI/CD integration with GitHub.
+* **Configuration:** Deployed as a monorepo with the Root Directory set to `frontend`.
+* **URL:** [https://chatwithpdf-git-main-anjil-adhikaris-projects.vercel.app/](https://chatwithpdf-git-main-anjil-adhikaris-projects.vercel.app/)
 
 ---
 
-## 🛠 Local Setup
+## Features
+
+* **⚡ Ultra-Fast Inference:** Leverages Groq's LPU technology for near-instant AI responses.
+* ** PDF Parsing:** Robust text extraction handling various PDF formats.
+* ** Contextual Awareness:** Uses similarity search to "read" only the relevant parts of the document.
+* ** Dockerized:** Fully containerized backend for consistent deployment across environments.
+* ** Modern UI:** Clean, split-screen interface built with Tailwind CSS.
+
+---
+
+##  Local Setup
 
 ### Prerequisites
 * Node.js & npm
