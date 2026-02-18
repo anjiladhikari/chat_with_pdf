@@ -28,7 +28,7 @@ function App() {
 
     try {
       // Connect to your FastAPI Backend
-      await axios.post("http://127.0.0.1:8000/upload", formData, {
+      await axios.post("https://anjil-talk-with-pdf.hf.space/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setUploadStatus("done");
@@ -52,7 +52,7 @@ function App() {
 
     try {
       // Send question to Backend
-      const response = await axios.post("http://127.0.0.1:8000/chat", {
+      const response = await axios.post("https://anjil-talk-with-pdf.hf.space/chat", {
         question: userMessage.text
       });
 
