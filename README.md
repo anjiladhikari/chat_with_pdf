@@ -17,7 +17,7 @@ The application follows a decoupled client-server architecture to ensure scalabi
 ### The Stack
 * **Frontend:** React + Vite + Tailwind CSS.
 * **Backend:** FastAPI + Uvicorn.
-* **AI Inference (LLM):** Llama-3-8b via **Groq LPU** (Language Processing Unit) for ultra-low latency.
+* **AI Inference (LLM):** Llama-3.1-8b via **Groq LPU** (Language Processing Unit) for ultra-low latency.
 * **Vector Store:** ChromaDB (In-memory) for efficient similarity search.
 * **Embeddings:** `sentence-transformers/all-MiniLM-L6-v2` (Running locally for zero-cost embedding).
 
@@ -50,11 +50,11 @@ The React frontend is deployed on **Vercel**, utilizing their Edge Network for f
 
 ## Features
 
-* **⚡ Ultra-Fast Inference:** Leverages Groq's LPU technology for near-instant AI responses.
-* ** PDF Parsing:** Robust text extraction handling various PDF formats.
-* ** Contextual Awareness:** Uses similarity search to "read" only the relevant parts of the document.
-* ** Dockerized:** Fully containerized backend for consistent deployment across environments.
-* ** Modern UI:** Clean, split-screen interface built with Tailwind CSS.
+* **Ultra-Fast Inference:** Leverages Groq's LPU technology for near-instant AI responses.
+* **PDF Parsing:** Robust text extraction handling various PDF formats.
+* **Contextual Awareness:** Uses similarity search to "read" only the relevant parts of the document.
+* **Dockerized:** Fully containerized backend for consistent deployment across environments.
+* **Modern UI:** Clean, split-screen interface built with Tailwind CSS.
 
 ---
 
